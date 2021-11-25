@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dart:async';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -9,6 +9,20 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  int time = 20;
+
+  void initState() {
+    super.initState();
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        time--;
+        if (time == 0) {
+          timer.cancel();
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -225,9 +239,9 @@ class _QuizState extends State<Quiz> {
                   width: 20.0,
                   height: 20.0,
                 ),
-                const Text(
-                  '20S',
-                  style: TextStyle(
+                Text(
+                  '${time}S',
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                   ),
