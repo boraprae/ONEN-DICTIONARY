@@ -244,6 +244,9 @@ class _QuizState extends State<Quiz> {
                   width: 20.0,
                   height: 20.0,
                 ),
+                const SizedBox(
+                  width: 5.0,
+                ),
                 Text(
                   '${time}S',
                   style: const TextStyle(
