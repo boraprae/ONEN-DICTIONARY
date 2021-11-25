@@ -54,7 +54,7 @@ class _WelcomepageState extends State<Welcomepage> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFF3FC0DF),
+                color: const Color(0xFF3FC0DF).withOpacity(0.7),
               ),
               child: Row(
                 children: [
@@ -120,7 +120,7 @@ class _WelcomepageState extends State<Welcomepage> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFF7AC4B),
+                color: const Color(0xFFF7AC4B).withOpacity(0.7),
               ),
               child: Row(
                 children: [
@@ -183,7 +183,7 @@ class _WelcomepageState extends State<Welcomepage> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFEDCEF3),
+                color: const Color(0xFFEDCEF3).withOpacity(0.7),
               ),
               child: Row(
                 children: [
@@ -249,7 +249,7 @@ class _WelcomepageState extends State<Welcomepage> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFF8450C),
+                color: const Color(0xFFF8450C).withOpacity(0.5),
               ),
               child: Row(
                 children: [
@@ -315,7 +315,7 @@ class _WelcomepageState extends State<Welcomepage> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFC0C6C8),
+                color: const Color(0xFFC0C6C8).withOpacity(0.7),
               ),
               child: Row(
                 children: [
