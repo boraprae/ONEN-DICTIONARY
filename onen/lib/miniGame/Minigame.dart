@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Paly extends StatefulWidget {
-  const Paly({Key? key}) : super(key: key);
+class PlayMiniGame extends StatefulWidget {
+  const PlayMiniGame({Key? key}) : super(key: key);
 
   @override
-  _PalyState createState() => _PalyState();
+  _PlayMiniGameState createState() => _PlayMiniGameState();
 }
 
-class _PalyState extends State<Paly> {
-
-  void startQuiz() {
-    print('f');
-  }
-
+class _PlayMiniGameState extends State<PlayMiniGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,21 +56,36 @@ class _PalyState extends State<Paly> {
                 height: 140.0,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 115.0),
-                    child: IconButton(
-                      padding: const EdgeInsets.all(0.0),
-                      color: const Color(0xFF70BBF2),
-                      icon: const Icon(Icons.play_circle_fill_outlined,
-                          size: 140.0),
-                      onPressed: startQuiz
+                  GestureDetector(
+                      child: Container(
+                    child: FittedBox(
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/quiz');
+                        },
+                        icon: const Icon(Icons.play_circle_fill_outlined),
+                        color: const Color(0xFFDDF3FE),
+                      ),
                     ),
-                  ),
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Color(0xFF000000),
+                            blurRadius: 7,
+                            offset: Offset(2, 2,)),
+                      ],
+                      color: const Color(0xFF7CC0F1),
+                      borderRadius: BorderRadius.circular(180),
+                    ),
+                  ))
                 ],
               ),
               const SizedBox(
-                height: 90.0,
+                height: 10.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

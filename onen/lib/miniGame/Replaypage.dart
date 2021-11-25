@@ -1,17 +1,21 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Replay extends StatefulWidget {
   const Replay({Key? key}) : super(key: key);
+
+
+
 
   @override
   _ReplayState createState() => _ReplayState();
 }
 
 class _ReplayState extends State<Replay> {
+  int score = 0;
   @override
   Widget build(BuildContext context) {
+    Map<String, dynamic> data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    score = data['score'];
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -73,9 +77,9 @@ class _ReplayState extends State<Replay> {
                   const SizedBox(
                     width: 10.0,
                   ),
-                  const Text(
-                    'Score = 10',
-                    style: TextStyle(
+                  Text(
+                    'Score = $score',
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25.0,
                       color: Color(0xFF000000),
@@ -94,8 +98,7 @@ class _ReplayState extends State<Replay> {
                     child: FittedBox(
                       child: IconButton(
                         onPressed: () {
-                          //! Button replay
-                          // print('1');
+                          Navigator.pushReplacementNamed(context, '/miniGame');
                         },
                         icon: const Icon(Icons.replay_outlined),
                         color: const Color(0xFFDDF3FE),

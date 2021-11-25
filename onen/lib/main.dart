@@ -9,10 +9,12 @@ import 'package:onen/dictionary.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/quiz',
+    initialRoute: '/miniGame',
     routes: {
+      '/miniGame': (context) => PlayMiniGame(),
       '/dictionary': (context) => Dictionary(),
       '/quiz': (context) => Quiz(),
+      '/replayMiniGame': (context) => Replay(),
     },
   ));
 }
