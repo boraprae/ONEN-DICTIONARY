@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:onen/miniGame/Quiz.dart';
 import 'package:onen/miniGame/Replaypage.dart';
 import 'package:onen/miniGame/Minigame.dart';
+import 'package:onen/dictionary.dart';
+
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Quiz(),
+    initialRoute: '/quiz',
+    routes: {
+      '/dictionary': (context) => Dictionary(),
+      '/quiz': (context) => Quiz(),
+    },
   ));
 }
