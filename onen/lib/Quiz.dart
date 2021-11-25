@@ -13,7 +13,7 @@ class _QuizState extends State<Quiz> {
 
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         time--;
         if (time == 0) {
