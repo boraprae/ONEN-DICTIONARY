@@ -94,7 +94,7 @@ class _QuizState extends State<Quiz> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '${question}', //! can chang text
+                    '${question}', //! text can chang 
                     style: const TextStyle(
                       fontSize: 17.0,
                       fontWeight: FontWeight.bold,
@@ -110,54 +110,65 @@ class _QuizState extends State<Quiz> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 90,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD0EFFF),
-                    border: Border.all(
+                GestureDetector(
+                  onTap: () {    //* ---------------------Button answer------------------------
+                    
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 170,
+                    decoration: BoxDecoration(
                       color: const Color(0xFFD0EFFF),
-                      width: 8,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '${choice1}', //! can chang text
-                        style: const TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF2A9DF4),
-                        ),
+                      border: Border.all(
+                        color: const Color(0xFFD0EFFF),
+                        width: 8,
                       ),
-                    ],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '${choice1}', //! text can chang 
+                          style: const TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF2A9DF4),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  height: 90,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFA6FFD1),
-                    border: Border.all(
+                GestureDetector(
+                  onTap: (){   //* ---------------------Button answer------------------------
+                    
+
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 170,
+                    decoration: BoxDecoration(
                       color: const Color(0xFFA6FFD1),
-                      width: 8,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '${choice2}', //! can chang text
-                        style: const TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF23BC8E),
-                        ),
+                      border: Border.all(
+                        color: const Color(0xFFA6FFD1),
+                        width: 8,
                       ),
-                    ],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '${choice2}', //! can chang text
+                          style: const TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF23BC8E),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -166,54 +177,66 @@ class _QuizState extends State<Quiz> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 90,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFEEFB0),
-                    border: Border.all(
+                GestureDetector(
+                  onTap: () {//* ---------------------Button answer------------------------
+                    
+
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 170,
+                    decoration: BoxDecoration(
                       color: const Color(0xFFFEEFB0),
-                      width: 8,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '${choice3}', //! can chang text
-                        style: const TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFF2C112),
-                        ),
+                      border: Border.all(
+                        color: const Color(0xFFFEEFB0),
+                        width: 8,
                       ),
-                    ],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '${choice3}', //! can chang text
+                          style: const TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFF2C112),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  height: 90,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFAF94),
-                    border: Border.all(
+                GestureDetector(
+                  onTap: (){//* ---------------------Button answer------------------------
+                    
+
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 170,
+                    decoration: BoxDecoration(
                       color: const Color(0xFFFFAF94),
-                      width: 8,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '${choice4}', //! can chang text
-                        style: const TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFDA3131),
-                        ),
+                      border: Border.all(
+                        color: const Color(0xFFFFAF94),
+                        width: 8,
                       ),
-                    ],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '${choice4}', //! can chang text
+                          style: const TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFDA3131),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
