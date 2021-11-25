@@ -15,6 +15,8 @@ class _QuizState extends State<Quiz> {
   String choice2 = 'Postpone';
   String choice3 = 'Feeble';
   String choice4 = 'Domestic';
+  String incorrect = 'Incorrect';
+  String content2 = 'You don’t get the score \n for this question.';
 
   void initState() {
     super.initState();
@@ -26,6 +28,112 @@ class _QuizState extends State<Quiz> {
         }
       });
     });
+  }
+
+//! -------show  alert Correct
+  Future showAlertCorrect() async {
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AlertDialog(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'Correct!',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF18AC00)),
+                  ),
+                ],
+              ),
+              content: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text('You got 1 more point!'),
+                ],
+              ),
+              actions: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Next Question',
+                        style: TextStyle(
+                          color: Color(0xFF2A9DF4),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Icon(Icons.arrow_forward_ios_outlined,
+                        color: Color(0xFF2A9DF4))
+                  ],
+                )
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  //! -------show  alert Incorrect
+  Future showAlertInCorrect() async {
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AlertDialog(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'InCorrect!',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFC93B3B)),
+                  ),
+                ],
+              ),
+              content: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text('You don’t get the score for this \n question.'),
+                ],
+              ),
+              actions: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Next Question',
+                        style: TextStyle(
+                          color: Color(0xFF2A9DF4),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Icon(Icons.arrow_forward_ios_outlined,
+                        color: Color(0xFF2A9DF4))
+                  ],
+                )
+              ],
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -94,7 +202,7 @@ class _QuizState extends State<Quiz> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '${question}', //! text can chang 
+                    '${question}', //! text can chang
                     style: const TextStyle(
                       fontSize: 17.0,
                       fontWeight: FontWeight.bold,
@@ -111,8 +219,9 @@ class _QuizState extends State<Quiz> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () {    //* ---------------------Button answer------------------------
-                    
+                  onTap: () {
+                    //* ---------------------Button answer------------------------
+                    showAlertInCorrect();
                   },
                   child: Container(
                     height: 90,
@@ -129,7 +238,7 @@ class _QuizState extends State<Quiz> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '${choice1}', //! text can chang 
+                          '${choice1}', //! text can chang
                           style: const TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -141,9 +250,8 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: (){   //* ---------------------Button answer------------------------
-                    
-
+                  onTap: () {
+                    //* ---------------------Button answer------------------------
                   },
                   child: Container(
                     height: 90,
@@ -178,9 +286,8 @@ class _QuizState extends State<Quiz> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () {//* ---------------------Button answer------------------------
-                    
-
+                  onTap: () {
+                    //* ---------------------Button answer------------------------
                   },
                   child: Container(
                     height: 90,
@@ -209,9 +316,8 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: (){//* ---------------------Button answer------------------------
-                    
-
+                  onTap: () {
+                    //* ---------------------Button answer------------------------
                   },
                   child: Container(
                     height: 90,
