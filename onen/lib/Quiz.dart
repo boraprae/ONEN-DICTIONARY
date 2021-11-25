@@ -10,6 +10,11 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   int time = 20;
+  String question = 'to put off or reschedule for a later \ntime; to delay';
+  String choice1 = 'Heartily';
+  String choice2 = 'Postpone';
+  String choice3 = 'Feeble';
+  String choice4 = 'Domestic';
 
   void initState() {
     super.initState();
@@ -87,10 +92,10 @@ class _QuizState extends State<Quiz> {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
-                    'to put off or reschedule for a later \ntime; to delay', //! can chang text
-                    style: TextStyle(
+                    '${question}', //! can chang text
+                    style: const TextStyle(
                       fontSize: 17.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -118,10 +123,10 @@ class _QuizState extends State<Quiz> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
-                        'Heartily', //! can chang text
-                        style: TextStyle(
+                        '${choice1}', //! can chang text
+                        style: const TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF2A9DF4),
@@ -143,10 +148,10 @@ class _QuizState extends State<Quiz> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
-                        'Postpone', //! can chang text
-                        style: TextStyle(
+                        '${choice2}', //! can chang text
+                        style: const TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF23BC8E),
@@ -174,10 +179,10 @@ class _QuizState extends State<Quiz> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
-                        'Feeble', //! can chang text
-                        style: TextStyle(
+                        '${choice3}', //! can chang text
+                        style: const TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFF2C112),
@@ -199,10 +204,10 @@ class _QuizState extends State<Quiz> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Text(
-                        'Domestic', //! can chang text
-                        style: TextStyle(
+                        '${choice4}', //! can chang text
+                        style: const TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFDA3131),
