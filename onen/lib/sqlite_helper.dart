@@ -58,6 +58,11 @@ class SQLiteHelper {
     return result;
   }
 
+  cbQuery(Function query) {
+    
+    return query(_db);
+  }
+
   void closeDB() async {
     await _db.close();
     print('DB closed');
