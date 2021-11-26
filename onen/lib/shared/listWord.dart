@@ -1,6 +1,11 @@
-class listWord {
-  String engWord = '';
-  String meaning = '';
+class ListWord {
+  String eentry = '';
+  String tentry = '';
+  String ecat = '';
 
-  listWord(this.engWord, this.meaning);
+  ListWord(
+    this.eentry,
+    this.ecat,
+    this.tentry,
+  );
 }

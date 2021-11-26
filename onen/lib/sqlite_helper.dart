@@ -8,7 +8,7 @@ class SQLiteHelper {
   late Database _db;
   String dbFile = 'lexitron.sqlite';
 
-  void openDB() async {
+  Future openDB() async {
     String databasePath = await getDatabasesPath();
     String path = join(databasePath, dbFile);
 
@@ -35,19 +35,27 @@ class SQLiteHelper {
     } else {
       print('Use existsing DB');
     }
-    
+
     //open DB
     _db = await openDatabase(path, readOnly: true, singleInstance: true);
   }
 
-  void getData() async {
-    List result = await _db
-        .rawQuery('SELECT tentry FROM eng2th WHERE esearch = ?', ['abacus']);
+  Future<List> getData() async {
+    List result = await _db.rawQuery('SELECT * FROM eng2th');
     if (result.isEmpty) {
       print('Not found');
     } else {
-      print(result);
+      // print(result);
+      print('Result success');
     }
+    return result;
+  }
+
+  Future<List> searchDB(keyword) async {
+    List result = await _db
+        .rawQuery('SELECT * FROM eng2th WHERE eentry LIKE ?', [keyword]);
+    print(result);
+    return result;
   }
 
   void closeDB() async {
