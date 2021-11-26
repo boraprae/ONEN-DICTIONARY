@@ -124,7 +124,7 @@ class _DictionaryState extends State<Dictionary> {
                   Spacer(),
                   IconButton(
                     onPressed: () {
-                      print('Exit');
+                     Navigator.pushNamed(context, '/mainMenu');
                     },
                     icon: Icon(
                       Icons.exit_to_app_outlined,

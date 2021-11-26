@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Firstpage extends StatefulWidget {
-  const Firstpage({Key? key}) : super(key: key);
+class MainMenu extends StatefulWidget {
+  const MainMenu({Key? key}) : super(key: key);
 
   @override
-  _FirstpageState createState() => _FirstpageState();
+  _MainMenuState createState() => _MainMenuState();
 }
 
-class _FirstpageState extends State<Firstpage> {
+class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +44,7 @@ class _FirstpageState extends State<Firstpage> {
             children: [
               GestureDetector(
                 onTap: () {
-                  print('1');
+                  Navigator.pushNamed(context, '/dictionary');
                 },
                 child: Container(
                     width: 400,
@@ -66,7 +66,10 @@ class _FirstpageState extends State<Firstpage> {
                       children: [
                         Text(
                           'DICTIONARY',
-                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                         Container(
                           height: 70,
@@ -79,10 +82,12 @@ class _FirstpageState extends State<Firstpage> {
                       ],
                     )),
               ),
-              SizedBox(height: 8.0,),
+              SizedBox(
+                height: 8.0,
+              ),
               GestureDetector(
                 onTap: () {
-                  print('1');
+                  Navigator.pushNamed(context, '/miniGame');
                 },
                 child: Container(
                     width: 400,
@@ -104,7 +109,10 @@ class _FirstpageState extends State<Firstpage> {
                       children: [
                         Text(
                           'MINI GAME',
-                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                         Container(
                           height: 70,
@@ -117,10 +125,12 @@ class _FirstpageState extends State<Firstpage> {
                       ],
                     )),
               ),
-              SizedBox(height: 8.0,),
+              SizedBox(
+                height: 8.0,
+              ),
               GestureDetector(
                 onTap: () {
-                  print('1');
+                 Navigator.pushNamed(context, '/teamDev');
                 },
                 child: Container(
                     width: 400,
@@ -141,8 +151,11 @@ class _FirstpageState extends State<Firstpage> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
-                          "TEAM"  '\n' "DEVERLOPER",
-                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),
+                          "TEAM" '\n' "DEVERLOPER",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                         Container(
                           height: 70,

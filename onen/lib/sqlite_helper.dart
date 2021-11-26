@@ -45,7 +45,6 @@ class SQLiteHelper {
     if (result.isEmpty) {
       print('Not found');
     } else {
-      // print(result);
       print('Result success');
     }
     return result;
@@ -54,7 +53,6 @@ class SQLiteHelper {
   Future<List> searchDB(keyword) async {
     List result = await _db
         .rawQuery('SELECT * FROM eng2th WHERE eentry LIKE ?', [keyword]);
-    print(result);
     return result;
   }
 

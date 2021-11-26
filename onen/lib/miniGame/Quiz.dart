@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:onen/sqlite_helper.dart';
 import 'package:onen/miniGame/questions.dart';
-import 'package:onen/miniGame/Replaypage.dart';
+import 'package:onen/miniGame/replaypage.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -215,9 +215,6 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('MINI GAME'),
-        // ),
         body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -263,7 +260,6 @@ class _QuizState extends State<Quiz> {
             ),
             Container(
               height: 120,
-              width: 360,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [
@@ -296,7 +292,7 @@ class _QuizState extends State<Quiz> {
               height: 20.0,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 GestureDetector(
                   onTap: () {
@@ -365,7 +361,7 @@ class _QuizState extends State<Quiz> {
             ),
             const SizedBox(height: 15.0),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 GestureDetector(
                   onTap: () {

@@ -144,7 +144,7 @@ class _ReplayState extends State<Replay> {
                     ),
                     onPressed: () {
                       //! button Exit to main menu
-                      // print('1');
+                      Navigator.pushNamed(context, '/mainMenu');
                     },
                     child: const Text(
                       'MAIN MENU',

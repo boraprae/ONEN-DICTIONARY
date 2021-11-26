@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onen/constantColor.dart';
 
 class PlayMiniGame extends StatefulWidget {
   const PlayMiniGame({Key? key}) : super(key: key);
@@ -11,42 +12,30 @@ class _PlayMiniGameState extends State<PlayMiniGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //       onPressed: () {},
-      //       icon: const Icon(
-      //         Icons.logout_outlined,
-      //         color: Colors.black,
-      //       ),
-      //     ),
-      //   ],
-      // ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 20.0),
+                padding: const EdgeInsets.fromLTRB(24, 50, 24, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'MINI',
                       style: TextStyle(
-                          color: Color(0xFF3FC0DF),
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'GAME',
-                      style: TextStyle(
-                        fontSize: 40.0,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
+                        color: blueSky,
+                      ),
+                    ),
+                    const Text(
+                      ' GAME',
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                   ],
@@ -76,7 +65,10 @@ class _PlayMiniGameState extends State<PlayMiniGame> {
                         BoxShadow(
                             color: Color(0xFF000000),
                             blurRadius: 7,
-                            offset: Offset(2, 2,)),
+                            offset: Offset(
+                              2,
+                              2,
+                            )),
                       ],
                       color: const Color(0xFF7CC0F1),
                       borderRadius: BorderRadius.circular(180),
@@ -97,6 +89,30 @@ class _PlayMiniGameState extends State<PlayMiniGame> {
                         fontSize: 40.0,
                         fontWeight: FontWeight.bold),
                   )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.exit_to_app_outlined),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      textStyle: const TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {
+                      //! button Exit to main menu
+                      Navigator.pushNamed(context, '/mainMenu');
+                    },
+                    child: const Text(
+                      'MAIN MENU',
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
